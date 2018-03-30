@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     this.lastName = this.registerForm.value.lastname;
 
     if (this.password === this.vpassword) {
-      this.userService.register(this.username, this.password, this.firstName, this.lastName).subscribe(
+      this.userService.register(this.username, this.password, this.firstName, this.lastName, this.role).subscribe(
         (data: User) => {
           switch (this.role) {
             case 'user': {
