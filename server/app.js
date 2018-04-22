@@ -1,5 +1,4 @@
 module.exports = function(app) {
-  console.log("Start server!");
   require("./models/model.js");
   require("./services/cafe.service.server.js")(app);
   require("./services/review.service.server.js")(app);

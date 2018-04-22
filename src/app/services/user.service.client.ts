@@ -30,7 +30,7 @@ export class UserService {
     });
   }
 
-  register(username: String, password: String, firstName: String, lastName: String, role: String) {
+  register(username: String, password: String, firstName: String, lastName: String, role = 'user') {
     const user = {
       username : username,
       password : password,
