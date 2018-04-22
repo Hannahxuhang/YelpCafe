@@ -55,6 +55,7 @@ app.use(cors(corsOptions));
 const port = process.env.PORT || '3100';
 app.set('port', port);
 
+require("./server/app.js")(app);
 // Create HTTP server
 const server = http.createServer(app);
 

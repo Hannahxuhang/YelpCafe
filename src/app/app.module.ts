@@ -4,7 +4,7 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 import { routing } from './app.routing';
-
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/customer/login/login.component';
@@ -65,7 +65,7 @@ import { ReviewService } from './services/review.service.client';
     FormsModule,
     ReactiveFormsModule,
     NgxCarouselModule,
-    HttpModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBKozXPSQr1_jDr3HKsqXHOEb3sviGOZG4',
       libraries: ['places']
