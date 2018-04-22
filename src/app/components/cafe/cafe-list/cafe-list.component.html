@@ -1,3 +1,8 @@
-<p>
-  cafe-list works!
-</p>
+<div class="cafe-list">
+  <app-result-box
+    *ngFor="let cafe of cafes"
+    [result]="cafe"
+    [routerLink]="['../cafe-profile', cafe._id]"
+    class="grid-item">
+  </app-result-box>
+</div>

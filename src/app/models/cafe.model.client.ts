@@ -4,11 +4,12 @@ export class Cafe {
   ownerId: string;
   name: string;
   address: string;
+  openHour: string;
   phone: string;
-  price_level: number;
+  priceLevel: number;
   rating: number;
-  is_open: boolean;
-  weekday_text: string[];
+  isOpen: boolean;
+  weekdayText: string[];
   icon: string;
   avatar: string;
   photos: string[];

@@ -52,10 +52,10 @@
           <span class="focus-input100"></span>
         </div>
 
-        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+        <div class="wrap-input100 validate-input" data-validate="Password is required">
           <span class="label-input100">Password</span>
           <input class="input100"
-                 type="text" name="pass" placeholder="*************"
+                 type="text" name="password" placeholder="*************"
                  ngModel required #password="ngModel"/>
           <span class="help-block" *ngIf="!password.valid && password.touched">
             Please enter password!
@@ -66,7 +66,7 @@
         <div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
           <span class="label-input100">Repeat Password</span>
           <input class="input100"
-                 type="text" name="repeat-pass" placeholder="*************"
+                 type="text" name="vpassword" placeholder="*************"
                  ngModel required #vpassword="ngModel"/>
           <span class="help-block" *ngIf="!vpassword.valid && vpassword.touched">
             Please verify password!

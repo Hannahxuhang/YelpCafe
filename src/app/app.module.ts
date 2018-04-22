@@ -35,6 +35,8 @@ import { UserService } from './services/user.service.client';
 import { CafeService } from './services/cafe.service.client';
 import { MenuService } from './services/menu.service.client';
 import { ReviewService } from './services/review.service.client';
+import { CafeViewComponent } from './components/cafe/cafe-view/cafe-view.component';
+import { MenuNewComponent } from './components/cafe/menu-new/menu-new.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { ReviewService } from './services/review.service.client';
     OwnerHomeComponent,
     UserListComponent,
     CafeImageComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    CafeViewComponent,
+    MenuNewComponent
   ],
   imports: [
     BrowserModule,

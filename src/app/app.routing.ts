@@ -13,20 +13,26 @@ import { CafeListComponent } from './components/cafe/cafe-list/cafe-list.compone
 import { CafeProfileComponent } from './components/cafe/cafe-profile/cafe-profile.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import {AdminProfileComponent} from './components/admin/admin-profile/admin-profile.component';
+import {CafeEditComponent} from './components/cafe/cafe-edit/cafe-edit.component';
+import {MenuNewComponent} from './components/cafe/menu-new/menu-new.component';
+import {CafeViewComponent} from './components/cafe/cafe-view/cafe-view.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'user/profile', component: ProfileComponent},
-  {path: 'owner', component: OwnerHomeComponent},
-  {path: 'owner/profile', component: OwnerProfileComponent},
-  {path: 'admin', component: AdminHomeComponent},
-  {path: 'owner/cafe/new', component: CafeNewComponent},
-  {path: 'owner/cafe', component: CafeListComponent},
-  {path: 'admin/users', component: UserListComponent},
-  {path: 'admin/profile', component: AdminProfileComponent},
-  {path: 'owner/cafe/:place_id', component: CafeProfileComponent}
+  {path: 'user/:userId/profile', component: ProfileComponent},
+  {path: 'owner/:ownerId', component: OwnerHomeComponent},
+  {path: 'owner/:ownerId/profile', component: OwnerProfileComponent},
+  {path: 'admin/:adminId', component: AdminHomeComponent},
+  {path: 'owner/:ownerId/cafe/new', component: CafeNewComponent},
+  {path: 'owner/:ownerId/cafe-list', component: CafeListComponent},
+  {path: 'owner/:ownerId/:cafeId/edit', component: CafeEditComponent},
+  {path: 'admin/:adminId/users', component: UserListComponent},
+  {path: 'admin/:adminId/profile', component: AdminProfileComponent},
+  {path: 'owner/cafe/:place_id', component: CafeProfileComponent},
+  {path: 'owner/:ownerId/cafe-profile/:cafeId/menu', component: MenuNewComponent},
+  {path: 'owner/:ownerId/cafe-profile/:cafeId', component: CafeViewComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

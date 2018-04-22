@@ -35,6 +35,12 @@ export class RegisterComponent implements OnInit {
     this.firstName = this.registerForm.value.firstname;
     this.lastName = this.registerForm.value.lastname;
 
+    console.log(this.username);
+    console.log(this.firstName);
+    console.log(this.lastName);
+    console.log(this.password);
+    console.log(this.vpassword);
+
     if (this.password === this.vpassword) {
       this.userService.register(this.username, this.password, this.firstName, this.lastName, this.role).subscribe(
         (data: User) => {
@@ -44,11 +50,11 @@ export class RegisterComponent implements OnInit {
               break;
             }
             case 'owner': {
-              this.router.navigate(['../owner']);
+              this.router.navigate(['../owner', data._id]);
               break;
             }
             case 'admin': {
-              this.router.navigate(['../admin']);
+              this.router.navigate(['../admin', data._id]);
               break;
             }
           }

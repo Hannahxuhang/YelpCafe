@@ -3,10 +3,10 @@ export class Menu {
   cafeId: string;
   image: string;
   price: string;
+  name: string;
   description: string;
 
-  constructor(_id: string, cafeId: string, image: string, price: string, description: string) {
-    this._id = _id;
+  constructor(cafeId: string, image: string, price: string, description: string) {
     this.cafeId = cafeId;
     this.image = image;
     this.price = price;

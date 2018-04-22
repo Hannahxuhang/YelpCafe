@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
-import {User} from '../../../models/user.model.client';
 import {NgForm} from '@angular/forms';
 import {UserService} from '../../../services/user.service.client';
 import {SharedService} from '../../../services/shared.service.client';
@@ -32,38 +31,24 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.username, this.password).subscribe(
       (user: any) => {
         this.sharedService.user = user;
-        // TODO: user needs to restore role in register
         switch (user.role) {
           case 'user': {
             this.router.navigate(['../']);
             break;
           }
           case 'owner': {
-            this.router.navigate(['../owner']);
+            this.router.navigate(['../owner', user._id]);
             break;
           }
           case 'admin': {
-            this.router.navigate(['../admin']);
+            this.router.navigate(['../admin', user._id]);
             break;
           }
         }
+      },
+      (error: any) => {
+        console.log(error);
       }
     );
-
-
-    // switch (this.role) {
-    //   case 'user': {
-    //     this.router.navigate(['../']);
-    //     break;
-    //   }
-    //   case 'owner': {
-    //     this.router.navigate(['../owner']);
-    //     break;
-    //   }
-    //   case 'admin': {
-    //     this.router.navigate(['../admin']);
-    //     break;
-    //   }
-    // }
   }
 }

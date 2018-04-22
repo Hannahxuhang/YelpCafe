@@ -39,21 +39,21 @@ export class CafeProfileComponent implements OnInit {
     this.hasPhotos = false;
 
     this.menu = [
-      new Menu('', '', '../../../../assets/images/menu1.jpg', '$2.0', 'Blonde Americano'),
-      new Menu('', '', '../../../../assets/images/menu2.jpg', '$3.5', 'Caffe Misto'),
-      new Menu('', '', '../../../../assets/images/menu3.jpg', '$4.5', 'Toasted Coconut Cold Brew'),
-      new Menu('', '', '../../../../assets/images/menu4.jpg', '$3.0', 'Nitro Cold Brew'),
-      new Menu('', '', '../../../../assets/images/menu5.jpg', '$2.0', 'Double Mocha'),
-      new Menu('', '', '../../../../assets/images/menu6.jpg', '$3.5', 'Cold Coffee with Milk'),
-      new Menu('', '', '../../../../assets/images/menu7.jpg', '$4.5', 'Cold Foam Cascara Cold Brew'),
-      new Menu('', '', '../../../../assets/images/menu8.jpg', '$5.0', 'Nitro Cold Brew'),
-      new Menu('', '', '../../../../assets/images/menu9.jpg', '$3.0', 'Caffe Latte'),
-      new Menu('', '', '../../../../assets/images/menu10.jpg', '$4.5', 'Caffe Mocha'),
-      new Menu('', '', '../../../../assets/images/menu11.jpg', '$6.0', 'Flat White'),
-      new Menu('', '', '../../../../assets/images/menu12.jpg', '$3.5', 'Espresso Macchiato'),
-      new Menu('', '', '../../../../assets/images/menu13.jpg', '$2.5', 'Espresso Con Panna'),
-      new Menu('', '', '../../../../assets/images/menu14.jpg', '$4.5', 'Iced Vanilla Latte'),
-      new Menu('', '', '../../../../assets/images/menu15.jpg', '$5.0', 'Vanilla Latte')
+      new Menu('', '../../../../assets/images/menu1.jpg', '$2.0', 'Blonde Americano'),
+      new Menu('', '../../../../assets/images/menu2.jpg', '$3.5', 'Caffe Misto'),
+      new Menu('', '../../../../assets/images/menu3.jpg', '$4.5', 'Toasted Coconut Cold Brew'),
+      new Menu('', '../../../../assets/images/menu4.jpg', '$3.0', 'Nitro Cold Brew'),
+      new Menu('', '../../../../assets/images/menu5.jpg', '$2.0', 'Double Mocha'),
+      new Menu('', '../../../../assets/images/menu6.jpg', '$3.5', 'Cold Coffee with Milk'),
+      new Menu('', '../../../../assets/images/menu7.jpg', '$4.5', 'Cold Foam Cascara Cold Brew'),
+      new Menu('', '../../../../assets/images/menu8.jpg', '$5.0', 'Nitro Cold Brew'),
+      new Menu('', '../../../../assets/images/menu9.jpg', '$3.0', 'Caffe Latte'),
+      new Menu('', '../../../../assets/images/menu10.jpg', '$4.5', 'Caffe Mocha'),
+      new Menu('', '../../../../assets/images/menu11.jpg', '$6.0', 'Flat White'),
+      new Menu('', '../../../../assets/images/menu12.jpg', '$3.5', 'Espresso Macchiato'),
+      new Menu('', '../../../../assets/images/menu13.jpg', '$2.5', 'Espresso Con Panna'),
+      new Menu('', '../../../../assets/images/menu14.jpg', '$4.5', 'Iced Vanilla Latte'),
+      new Menu('', '../../../../assets/images/menu15.jpg', '$5.0', 'Vanilla Latte')
     ];
 
     this.reviews = [
@@ -78,12 +78,12 @@ export class CafeProfileComponent implements OnInit {
           temp.cafe.name = place.name;
           temp.cafe.address = place.vicinity;
           temp.cafe.icon = place.icon;
-          temp.cafe.is_open = place.opening_hours.open_now;
-          temp.cafe.price_level = place.price_level;
+          temp.cafe.isOpen = place.opening_hours.open_now;
+          temp.cafe.priceLevel = place.price_level;
           temp.cafe.phone = place.formatted_phone_number;
-          temp.cafe.weekday_text = place.opening_hours.weekday_text;
+          temp.cafe.weekdayText = place.opening_hours.weekday_text;
           temp.cafe.rating = place.rating;
-          temp.cafe.price_level = place.price_level;
+          temp.cafe.priceLevel = place.price_level;
 
           temp.cafe.photos = [];
           if (place.photos !== undefined) {
