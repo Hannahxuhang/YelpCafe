@@ -37,6 +37,7 @@ import { MenuService } from './services/menu.service.client';
 import { ReviewService } from './services/review.service.client';
 import { CafeViewComponent } from './components/cafe/cafe-view/cafe-view.component';
 import { MenuNewComponent } from './components/cafe/menu-new/menu-new.component';
+import { CutomerHomeComponent } from './components/customer/cutomer-home/cutomer-home.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { MenuNewComponent } from './components/cafe/menu-new/menu-new.component'
     CafeImageComponent,
     MenuItemComponent,
     CafeViewComponent,
-    MenuNewComponent
+    MenuNewComponent,
+    CutomerHomeComponent
   ],
   imports: [
     BrowserModule,

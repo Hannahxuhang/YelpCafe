@@ -7,5 +7,5 @@ export class SharedService {
   cafe: Cafe;
   customer = null;
   map: google.maps.Map;
-  user = '';
+  user = null;
 }

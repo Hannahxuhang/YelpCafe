@@ -59,7 +59,7 @@ export class UserService {
 
 
   getCafesByOwnerId(ownerId) {
-    return this.httpClient.get(this.baseUrl + 'api/owner/' + ownerId + 'cafes');
+    return this.httpClient.get(this.baseUrl + 'api/owner/' + ownerId + '/cafes');
   }
 
   createUser(user) {

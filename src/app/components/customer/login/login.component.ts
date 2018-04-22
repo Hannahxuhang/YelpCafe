@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
         this.sharedService.user = user;
         switch (user.role) {
           case 'user': {
-            this.router.navigate(['../']);
+            this.router.navigate(['../user', user._id]);
             break;
           }
           case 'owner': {

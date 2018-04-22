@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
         (data: User) => {
           switch (this.role) {
             case 'user': {
-              this.router.navigate(['../']);
+              this.router.navigate(['../user', data._id]);
               break;
             }
             case 'owner': {

@@ -16,6 +16,7 @@ import {AdminProfileComponent} from './components/admin/admin-profile/admin-prof
 import {CafeEditComponent} from './components/cafe/cafe-edit/cafe-edit.component';
 import {MenuNewComponent} from './components/cafe/menu-new/menu-new.component';
 import {CafeViewComponent} from './components/cafe/cafe-view/cafe-view.component';
+import {CutomerHomeComponent} from './components/customer/cutomer-home/cutomer-home.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
   {path: 'admin/:adminId/profile', component: AdminProfileComponent},
   {path: 'owner/cafe/:place_id', component: CafeProfileComponent},
   {path: 'owner/:ownerId/cafe-profile/:cafeId/menu', component: MenuNewComponent},
-  {path: 'owner/:ownerId/cafe-profile/:cafeId', component: CafeViewComponent}
+  {path: 'owner/:ownerId/cafe-profile/:cafeId', component: CafeViewComponent},
+  {path: 'user/:userId', component: CutomerHomeComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
