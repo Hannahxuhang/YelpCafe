@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Cafe} from '../../../models/cafe.model.client';
 import {ActivatedRoute} from '@angular/router';
 import {} from '@types/googlemaps';
 import {SharedService} from '../../../services/shared.service.client';
 import {Menu} from '../../../models/menu.model.client';
+import {Review} from '../../../models/review.model.client';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-cafe-profile',
@@ -21,6 +23,10 @@ export class CafeProfileComponent implements OnInit {
 
   // TODO: change it after db set up.
   menu: Menu[];
+  reviews: Review[];
+  reviewContent: string;
+
+  @ViewChild('f') reviewForm: NgForm;
 
   constructor(
     private sharedService: SharedService,
@@ -48,6 +54,12 @@ export class CafeProfileComponent implements OnInit {
       new Menu('', '', '../../../../assets/images/menu13.jpg', '$2.5', 'Espresso Con Panna'),
       new Menu('', '', '../../../../assets/images/menu14.jpg', '$4.5', 'Iced Vanilla Latte'),
       new Menu('', '', '../../../../assets/images/menu15.jpg', '$5.0', 'Vanilla Latte')
+    ];
+
+    this.reviews = [
+      new Review('', '', '', 'great!'),
+      new Review('', '', '', 'This Cafe is be best one I have ever been.'),
+      new Review('', '', '', 'I like the Mocha and Latte made by the cafe owner, it tastes so good!')
     ];
 
     // Initialize PlaceDetail service
@@ -88,5 +100,12 @@ export class CafeProfileComponent implements OnInit {
         }
       });
     });
+  }
+
+  addReview() {
+    this.reviewContent = this.reviewForm.value.review;
+
+    // TODO: user ReviewService to submit this review to db.
+    console.log(this.reviewContent);
   }
 }

@@ -55,7 +55,28 @@
        </app-menu-item>
      </div>
      <div id="reviews" class="tab-pane fade">
-       <p>reviews</p>
+       <ul class="list-group" *ngFor="let review of reviews">
+         <li class="list-group-item list-group-item-warning">
+           <!--<span class="badge">{{username}}</span>-->
+           {{review.content}}
+         </li>
+       </ul>
+       <form (ngSubmit)="addReview()" #f="ngForm">
+         <div class="form-group">
+           <div class="col-sm-10">
+             <label for="review">ADD REVIEW </label>
+             <input type="text"
+                    id="review"
+                    class="form-control"
+                    placeholder="Add your review..."
+                    name="review"
+                    ngModel required #review="ngModel"/>
+           </div>
+         </div>
+         <div class="form-group">
+           <button id="addReview" type="submit" class="btn btn-default">SUBMIT</button>
+         </div>
+       </form>
      </div>
    </div>
  </div>

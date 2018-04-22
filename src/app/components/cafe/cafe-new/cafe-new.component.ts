@@ -12,4 +12,7 @@ export class CafeNewComponent implements OnInit {
   ngOnInit() {
   }
 
+  createCafe() {
+    console.log();
+  }
 }

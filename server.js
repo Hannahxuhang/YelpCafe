@@ -55,7 +55,10 @@ app.use(cors(corsOptions));
 const port = process.env.PORT || '3100';
 app.set('port', port);
 
+<<<<<<< HEAD
 require("./server/app.js")(app);
+=======
+>>>>>>> add new cafe
 // Create HTTP server
 const server = http.createServer(app);
 
