@@ -4,12 +4,14 @@ module.exports = function (app) {
     var LocalStrategy = require('passport-local').Strategy;
     var FacebookStrategy = require('passport-facebook').Strategy;
     var bcrypt = require("bcrypt-nodejs");
+    var userId;
 
     var facebookConfig = {
         //clientID: process.env.FB_CLIENT_ID,
-        clientID: '123',
-        clientSecret: process.env.FB_CLIENT_SECRET,
-        callbackURL: process.env.FB_CALLBACK_URL
+        clientID: '229262751178176',
+        clientSecret: '213c96dfa1d8833885a517363b77cf06',
+        callbackURL: 'https://salty-wildwood-98554.herokuapp.com/auth/facebook/callback'
+
     };
 
     app.get("/api/user/all", findAllUser);
@@ -28,7 +30,7 @@ module.exports = function (app) {
 
     app.get('/auth/facebook/callback',
         passport.authenticate('facebook', {
-            successRedirect: '/user/',
+            successRedirect: '/user/' + userId,
             failureRedirect: '/login'
         }));
     app.get ('/facebook/login', passport.authenticate('facebook', { scope : 'email' }));
